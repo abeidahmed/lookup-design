@@ -1,2 +1,2 @@
-web: rails s -p 3000
-client: cd client && npm start -p 4200
+web: rails s -p 4200
+client: cd client && npm start -p 3000
