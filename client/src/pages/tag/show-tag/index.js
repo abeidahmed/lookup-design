@@ -51,13 +51,17 @@ function ShowTag() {
           <div className="relative justify-end hidden py-2 space-x-2 border-b border-gray-300 md:flex">
             <button
               onClick={() => setGrid(false)}
-              className="text-gray-600 focus:outline-none focus:text-gray-900 hover:text-gray-700"
+              className={`text-gray-600 focus:outline-none focus:text-gray-900 hover:text-gray-700 ${
+                !grid && 'text-gray-900'
+              }`}
             >
               <Icon icon="menu" className="w-6 h-6" />
             </button>
             <button
               onClick={() => setGrid(true)}
-              className="text-gray-600 focus:outline-none focus:text-gray-900 hover:text-gray-700"
+              className={`text-gray-600 focus:outline-none focus:text-gray-900 hover:text-gray-700 ${
+                grid && 'text-gray-900'
+              }`}
             >
               <Icon icon="grid" className="w-6 h-6" />
             </button>
