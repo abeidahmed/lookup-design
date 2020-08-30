@@ -1,3 +1,14 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+
+.text-gradient {
+  background-color: #004ca6;
+  background-image: linear-gradient(90deg, #35a9fd 0, #004ca6 95%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 @import 'tailwindcss/utilities';
