@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_08_30_042835) do
     t.string "title"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["title"], name: "index_tags_on_title"
   end
 
 end
