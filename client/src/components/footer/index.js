@@ -29,7 +29,7 @@ function Footer() {
             </div>
           </form>
           <p className="mt-3 text-sm leading-5 text-gray-300">
-            No spam, ever! Unubscribe any time.
+            No spam, ever! Unsubscribe any time.
           </p>
         </div>
       </div>
