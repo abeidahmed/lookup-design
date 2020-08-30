@@ -2,8 +2,12 @@ import React from 'react';
 import { Container } from 'components/container';
 import { Icon } from 'components/icons';
 import BrandLogo from '../assets/brand-logo.png';
+import { useQuery } from 'react-query';
+import { fetchTags } from 'api/tags/tag-list';
 
 function Hero() {
+  const { isLoading, isError, data } = useQuery('allTags', fetchTags);
+
   return (
     <section className="py-20 bg-brand-50">
       <Container>
@@ -30,12 +34,17 @@ function Hero() {
           </div>
         </form>
         <div className="mt-2 -mx-1">
-          <a
-            href="#"
-            className="inline-flex leading-6 items-center px-3 py-0.5 rounded-full m-1 text-sm font-medium bg-indigo-100 text-indigo-800"
-          >
-            blogpost
-          </a>
+          {!isLoading &&
+            !isError &&
+            data.data.tags.map((tag) => (
+              <a
+                key={tag.id}
+                href="#"
+                className="inline-flex leading-6 items-center px-3 py-0.5 rounded-full m-1 text-sm font-medium bg-indigo-100 text-indigo-800"
+              >
+                {tag.title}
+              </a>
+            ))}
         </div>
         <div className="flex justify-center">
           <img

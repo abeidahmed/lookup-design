@@ -9,6 +9,7 @@ gem 'puma', '~> 4.1'
 gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+gem 'rack-cors'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
