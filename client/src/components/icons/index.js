@@ -10,6 +10,20 @@ const Glyph = ({ icon }) => {
         </g>
       );
     }
+    case 'menu': {
+      return (
+        <g>
+          <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
+        </g>
+      );
+    }
+    case 'grid': {
+      return (
+        <g>
+          <path d="M4 4H8V8H4zM10 4H14V8H10zM16 4H20V8H16zM4 10H8V14H4zM10 10H14V14H10zM16 10H20V14H16zM4 16H8V20H4zM10 16H14V20H10zM16 16H20V20H16z" />
+        </g>
+      );
+    }
     default:
       return null;
   }

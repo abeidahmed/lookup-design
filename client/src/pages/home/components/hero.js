@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container } from 'components/container';
 import { Icon } from 'components/icons';
 import BrandLogo from '../assets/brand-logo.png';
@@ -37,13 +38,14 @@ function Hero() {
           {!isLoading &&
             !isError &&
             data.data.tags.map((tag) => (
-              <a
+              <Link
+                to={`/tags/${tag.id}`}
                 key={tag.id}
                 href="#"
                 className="inline-flex leading-6 items-center px-3 py-0.5 rounded-full m-1 text-sm font-medium bg-indigo-100 text-indigo-800"
               >
                 {tag.title}
-              </a>
+              </Link>
             ))}
         </div>
         <div className="flex justify-center">
