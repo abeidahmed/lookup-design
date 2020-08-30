@@ -6,7 +6,7 @@ import { Container } from 'components/container';
 function Header() {
   return (
     <header
-      className="sticky top-0 z-50 bg-white shadow"
+      className="sticky top-0 z-40 bg-white shadow"
       style={{
         background: 'rgba(255, 255, 255, 0.4)',
         backdropFilter: 'blur(5px)',

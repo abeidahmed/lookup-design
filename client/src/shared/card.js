@@ -1,9 +1,23 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { openModal } from 'actions/modal';
 
-export function Card({ grid }) {
+function Card({ grid, openModal }) {
+  function showUi() {
+    openModal('SHOWUI', {
+      id: 1,
+      imgLink: 'google.com',
+      size: 'max-w-screen-lg',
+      position: 'center',
+    });
+  }
+
   return (
     <div className={`relative my-6 ${grid && 'md:w-1/2 md:px-4'}`}>
-      <button className="absolute top-0 bottom-0 left-0 z-20 block w-full">
+      <button
+        onClick={showUi}
+        className="absolute top-0 bottom-0 left-0 z-20 block w-full"
+      >
         <span className="sr-only">Open image</span>
       </button>
       <div className="flex justify-between pt-2">
@@ -24,3 +38,12 @@ export function Card({ grid }) {
     </div>
   );
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    openModal: (modalType, modalProps) =>
+      dispatch(openModal(modalType, modalProps)),
+  };
+}
+
+export default connect(null, mapDispatchToProps)(Card);

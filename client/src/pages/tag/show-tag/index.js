@@ -5,7 +5,7 @@ import { fetchSingleTag } from 'api/tags/show-tag';
 import { Container } from 'components/container';
 import { Pattern } from './assets/pattern';
 import { Icon } from 'components/icons';
-import { Card } from 'shared/card';
+import Card from 'shared/card';
 
 function TagTitle({ title }) {
   return (
